@@ -1,4 +1,4 @@
-package Kafka.listener.Factory.pattern.parsers.json.xml.csv.edi.with.retry.DLQ;
+package com.vijay.kafka.ingestion;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

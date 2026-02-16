@@ -1,7 +1,7 @@
 plugins {
 	id 'java'
 	id 'org.springframework.boot' version '3.2.2'
-	id 'io.spring.dependency-management' version '1.1.4'
+//	id 'io.spring.dependency-management' version '1.1.4'
 }
 
 group = 'com.vijay.kafka'
@@ -14,12 +14,21 @@ java {
 repositories { mavenCentral() }
 
 dependencies {
+	implementation platform("org.springframework.boot:spring-boot-dependencies:3.2.2")
 	implementation 'org.springframework.boot:spring-boot-starter'
 	implementation 'org.springframework.kafka:spring-kafka'
 
 	// Retry (optional, but good for reference)
 	implementation 'org.springframework.retry:spring-retry'
 	implementation 'org.springframework:spring-aspects'
+
+		implementation "org.springframework.retry:spring-retry"
+		implementation "org.springframework:spring-aspects"
+
+		implementation "com.fasterxml.jackson.core:jackson-databind"
+		implementation "com.fasterxml.jackson.dataformat:jackson-dataformat-xml"
+		implementation "com.fasterxml.jackson.dataformat:jackson-dataformat-csv"
+
 
 	// Jackson
 	implementation 'com.fasterxml.jackson.core:jackson-databind'
